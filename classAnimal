@@ -1,0 +1,19 @@
+class Animal {
+    public void emitirSom() {
+        System.out.println("Som genérico do animal");
+    }
+}
+
+class Cachorro extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("Latido: Au Au");
+    }
+}
+
+public class TesteSobrescrita {
+    public static void main(String[] args) {
+        Animal meuAnimal = new Cachorro();
+        meuAnimal.emitirSom(); // Resultado: Latido: Au Au
+    }
+}
